@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Updation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="p-10">
+        <h1 class="text-3xl">Update User</h1>
+        <hr>
+      <form class="p-5" action="/update/<%= user._id %>" method="POST">
+        <input
+          type="text"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-64 p-2.5 mt-4"
+          autocomplete="off"
+          placeholder="name"
+          name="name"
+          value="<%= user.name %>"
+        />
+        <input
+          type="email"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-64 p-2.5 mt-4"
+          autocomplete="off"
+          placeholder="email"
+          name="email"
+          value="<%= user.email %>"
+        />
+        <input
+          type="imageurl"
+          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-64 p-2.5 mt-4"
+          autocomplete="off"
+          placeholder="img-url"
+          name="imgurl"
+          value="<%= user.imgurl %>"
+        />
+        <input
+          class="p-2 bg-yellow-800 rounded-lg text-white mt-4 cursor-pointer"
+          type="submit"
+          value="Update User"
+        />
+      </form>
+    </div>
+  </body>
+</html>
